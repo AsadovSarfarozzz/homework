@@ -9,6 +9,8 @@
       "Courier New", monospace;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --font-weight-semibold: 600;
@@ -175,6 +177,15 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
+  .mt-9 {
+    margin-top: calc(var(--spacing) * 9);
+  }
+  .mt-28 {
+    margin-top: calc(var(--spacing) * 28);
+  }
+  .mb-auto {
+    margin-bottom: auto;
+  }
   .flex {
     display: flex;
   }
@@ -202,9 +213,6 @@
   .items-center {
     align-items: center;
   }
-  .justify-around {
-    justify-content: space-around;
-  }
   .justify-between {
     justify-content: space-between;
   }
@@ -219,16 +227,6 @@
   }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
-  }
-  .rounded-t {
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-  }
-  .rounded-tl {
-    border-top-left-radius: 0.25rem;
-  }
-  .rounded-tl-\[50pc\] {
-    border-top-left-radius: 50pc;
   }
   .rounded-tl-\[50px\] {
     border-top-left-radius: 50px;
@@ -246,14 +244,8 @@
   .bg-\[\#24AB700A\] {
     background-color: #24AB700A;
   }
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
-  }
   .p-5 {
     padding: calc(var(--spacing) * 5);
-  }
-  .p-10 {
-    padding: calc(var(--spacing) * 10);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
@@ -270,25 +262,17 @@
   .text-center {
     text-align: center;
   }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
   .text-6xl {
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
-  .leading-2 {
-    --tw-leading: calc(var(--spacing) * 2);
-    line-height: calc(var(--spacing) * 2);
-  }
-  .leading-2\.5 {
-    --tw-leading: calc(var(--spacing) * 2.5);
-    line-height: calc(var(--spacing) * 2.5);
-  }
   .leading-\[70px\] {
     --tw-leading: 70px;
     line-height: 70px;
-  }
-  .leading-\[100px\] {
-    --tw-leading: 100px;
-    line-height: 100px;
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -310,6 +294,26 @@
   .lg\:block {
     @media (width >= 64rem) {
       display: block;
+    }
+  }
+  .lg\:w-\[4px\] {
+    @media (width >= 64rem) {
+      width: 4px;
+    }
+  }
+  .lg\:w-\[400px\] {
+    @media (width >= 64rem) {
+      width: 400px;
+    }
+  }
+  .lg\:w-\[409px\] {
+    @media (width >= 64rem) {
+      width: 409px;
+    }
+  }
+  .lg\:w-\[411px\] {
+    @media (width >= 64rem) {
+      width: 411px;
     }
   }
   .lg\:w-\[500px\] {
